@@ -35,7 +35,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 d.addEventListener("click", (e) => {
   if (e.target.matches(".menu a")) {
     e.preventDefault();
-    console.log(e.target);
+    //console.log(e.target);
     getHTML({
       url: e.target.href,
       success: (html) => ($main.innerHTML = html),
