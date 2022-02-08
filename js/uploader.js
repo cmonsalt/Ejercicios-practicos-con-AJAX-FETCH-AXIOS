@@ -15,7 +15,8 @@ const uploader = (file) => {
     }
 
     if (xhr.status >= 200 && xhr.status < 300) {
-      console.log(xhr.responseText);
+      let json = JSON.parse(xhr.responseText);
+      //console.log(json);
     } else {
       let message = xhr.statusText || "ocurrio un error";
       err(`Error ${xhr.status}: ${message}`);
