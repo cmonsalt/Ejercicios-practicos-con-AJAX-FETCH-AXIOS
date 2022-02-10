@@ -62,7 +62,7 @@ main {
   opacity: 0.75;
 }
 
-/* Uploader con AJAX */
+/* Uploader con AJAX  y Ajax con Drag & Drops */
 .main {
   display: flex;
   flex-direction: column;
@@ -71,7 +71,40 @@ main {
   text-align: center;
   min-height: 100vh;
 }
+body {
+  margin: 0;
+}
 
 progress {
   margin-top: 1rem;
+}
+
+.drop-zon {
+  margin-left: auto;
+  margin-right: auto;
+  border: thin dotted #000;
+  width: 80%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.drop-zon.is-active {
+  border: thick dashed #000;
+  background-color: rgba(0, 128, 0, 0.5);
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
 }
