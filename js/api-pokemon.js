@@ -46,6 +46,9 @@ async function loadPokemons(url) {
       }
     }
     $main.innerHTML = $template;
+    $prevLink = json.previous ? `<a href="${json.previous}">⏮️</a>` : "";
+    $nextLink = json.next ? `<a href="${json.next}">⏭️</a>` : "";
+    $links.innerHTML = $prevLink + " " + $nextLink;
   } catch (err) {
     let message = err.statusText || "Ocurrió un error";
     $main.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
@@ -55,3 +58,11 @@ async function loadPokemons(url) {
 d.addEventListener("DOMContentLoaded", (e) =>
   loadPokemons("https://pokeapi.co/api/v2/pokemon/")
 );
+
+d.addEventListener("click", (e) => {
+  if (e.target.matches(".links a")) {
+    //console.log(e.target);
+    e.preventDefault();
+    loadPokemons(e.target.getAttribute("href"));
+  }
+});
