@@ -193,3 +193,19 @@ progress {
     opacity: 1;
   }
 }
+
+/* **********     Pokemons     ********** */
+html {
+  text-align: center;
+}
+
+.grid-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+}
+
+.loader {
+  display: block;
+  margin: auto;
+}
