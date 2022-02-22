@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Canciones con Fetch + Async</title>
+  <link rel="stylesheet" href="css/api-canciones.css">
+</head>
+
+<body>
+  <h1>Buscador de Canciones con Fetch + Async</h1>
+  <form id="song-search">
+    <input type="text" name="artist" placeholder="Nombre del interprete" required>
+    <br>
+    <input type="text" name="song" placeholder="Nombre de la canción" required>
+    <br>
+    <input type="submit">
+  </form>
+  <img class="loader" src="assets/loader.svg" alt="Cargando...">
+  <aside class="error"></aside>
+  <main>
+    <article class="artist">
+      <h2>Información del Artista</h2>
+    </article>
+    <article class="song">
+      <h2>Letra de la Canción</h2>
+    </article>
+  </main>
+
+  <script src="js/api-canciones.js"></script>
+</body>
+
+</html>
